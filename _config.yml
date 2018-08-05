@@ -1,0 +1,68 @@
+# Site Info
+title: Deep Learning For You!!!
+tagline: 'Deep Learning For You!!! | Learning to learning.'
+description: 'Blog of Pedro D. Marrero Fernandez. Here are some technical stuff. Some notes about development.'
+baseurl: ""
+url: http://pedrodiamel.github.io
+logo: '/public/logo.png'
+
+# Site configurations
+# plugins:
+#   - jekyll-paginate
+markdown: kramdown
+# kramdown:
+#   input: GFM
+
+excerpt_separator: "<!-- more -->"
+
+sass:
+  style: compressed
+  sass_dir: _scss    
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: /:year-:month-:day-:title/
+future: true
+
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: Pedro D. Marrero Fernandez
+  description: A passionate <strong>developer and researcher</strong>, learning to learning.
+  gravatar: 5395ebb7e604036f062a9629d4f4328d # md5 hash of your email address
+  contact:
+    linkedin:  https://www.linkedin.com/in/pedro-diamel
+    github:    https://github.com/pedrodiamel
+    # facebook:  <hide>
+    twitter:   https://twitter.com/Pedrodiamel
+    # weibo:     http://weibo.com/41173780
+    email:     malito:pedrodiamel@gmail.com
+
+# Navigation (2nd level links supported)
+nav:
+  Home:           
+    - '/'
+  Blog:           
+    - '/blog/'
+    - { Categories: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
+  About:          
+    - '/about/'
+  Github Project: 
+    - 'http://pedrodiamel.github.io/'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+
+hero:
+  image: 
+  caption: 
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
+disqus_short_name: 'your_short_name' # leave blank if you don't want disqus
+
