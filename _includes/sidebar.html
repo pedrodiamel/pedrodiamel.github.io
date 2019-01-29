@@ -1,6 +1,7 @@
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
-<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" >
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
@@ -23,6 +24,12 @@
         {% assign iconname = contact[0] %}
         {% if contact[0] == 'email' %}
         {% assign iconname = 'envelope' %}
+        {% endif %}
+        {% if contact[0] == 'googlescholar' %}
+        {% assign iconname = 'google' %}
+        {% endif %}
+        {% if contact[0] == 'orcid' %}
+        {% assign iconname = 'orcid' %}
         {% endif %}
         <a href="{{ contact[1] }}">
           <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
@@ -70,15 +77,13 @@
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 
-  <div class="sidebar-item">
-    <p>
-    &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. This work is liscensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
-    </p>
+  <!-- <div class="sidebar-item">
+    <p> &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. This work is liscensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>. </p>
   </div>
 
   <div class="sidebar-item">
-    <p>
-    Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a>
-    </p>
-  </div>
+    <p>Powered by <a href="http://jekyllrb.com">jekyll</a> and <a href="http://codinfox.github.io">codinfox-lanyon</a> </p>
+  </div> -->
+
+
 </div>

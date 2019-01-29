@@ -1,17 +1,44 @@
-# Site Info
-title: Deep Learning For You!!!
-tagline: 'Deep Learning For You!!! | Learning to learning.'
-description: 'Blog of Pedro D. Marrero Fernandez. Here are some technical stuff. Some notes about development.'
-baseurl: ""
-url: http://pedrodiamel.github.io
-logo: '/public/logo.png'
 
-# Site configurations
-# plugins:
-#   - jekyll-paginate
+
+version: 1.0.0
+
+# Site Settings
+locale              : "en-US"
+title               : "Pedro D. Marrero"
+title_separator     : "-"
+name                : &name "Pedro D. Marrero"
+tagline             : "D33p L3rn!ng 70r Y0u!!! | Learning to learning."
+description         : &description "Site of Pedro D. Marrero Fernandez."
+baseurl             : ""
+url                 : http://pedrodiamel.github.io
+logo                : '/public/logo.png'
+
+
+# Site Author
+author:
+  name              : Pedro D. Marrero Fernandez
+  description       : Vision Computer Engineers and Researcher at <strong>Motorola LLC - CIn partnership</strong>.
+  gravatar          : 5395ebb7e604036f062a9629d4f4328d # md5 hash of your email address
+  contact:
+    linkedin        : https://www.linkedin.com/in/pedro-diamel
+    github          : https://github.com/pedrodiamel
+    twitter         : https://twitter.com/Pedrodiamel
+    googlescholar   : https://scholar.google.com/citations?authuser=1&user=g7Vcpe4AAAAJ 
+    email           : malito:pedrodiamel@gmail.com
+    #orcid           : orcid
+    # facebook        : face
+    # weibo:     http://weibo.com/41173780
+
+
 markdown: kramdown
 # kramdown:
 #   input: GFM
+# plugins:
+#   - jekyll-paginate
+
+
+
+
 
 excerpt_separator: "<!-- more -->"
 
@@ -24,20 +51,11 @@ permalink: /:year-:month-:day-:title/
 future: true
 
 
-version: 1.0.0
 
-# About/contact
-author:
-  name: Pedro D. Marrero Fernandez
-  description: A passionate <strong>developer and researcher</strong>, learning to learning.
-  gravatar: 5395ebb7e604036f062a9629d4f4328d # md5 hash of your email address
-  contact:
-    linkedin:  https://www.linkedin.com/in/pedro-diamel
-    github:    https://github.com/pedrodiamel
-    # facebook:  <hide>
-    twitter:   https://twitter.com/Pedrodiamel
-    # weibo:     http://weibo.com/41173780
-    email:     malito:pedrodiamel@gmail.com
+
+
+
+
 
 # Navigation (2nd level links supported)
 nav:
@@ -56,10 +74,12 @@ nav:
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
-
 hero:
   image: 
   caption: 
+
+
+
 
 # Puglins
 mathjax: true # whether support mathjax
