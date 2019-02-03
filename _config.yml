@@ -37,9 +37,6 @@ markdown: kramdown
 #   - jekyll-paginate
 
 
-
-
-
 excerpt_separator: "<!-- more -->"
 
 sass:
@@ -69,6 +66,7 @@ nav:
     - '/about/'
   Github Project: 
     - 'http://pedrodiamel.github.io/'
+
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
