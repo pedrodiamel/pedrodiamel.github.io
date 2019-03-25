@@ -26,7 +26,7 @@ title: Home
       <td width="20%" valign="top">
         <!-- image -->
         <div class="col-sm-2 project-thumbnail-home"></div>
-        <img src="/public/img/comingsoon-001.jpg" class="img-responsive-home" alt="ContextLocNet">
+        <img src="https://github.com/pedrodiamel/ferattention/raw/master/rec/emotion.gif" class="img-responsive-home" alt="ContextLocNet">
         </div>
 
         <!-- description -->
@@ -39,15 +39,21 @@ title: Home
           </div>
           <div class="project-links-home" id="attfer_bib" >            
             [<a href=" ">paper</a>] &nbsp;
-            [<a href=" " >arxiv</a>] &nbsp;
-            [<a href=" ">code</a>] &nbsp;
+            [<a href="https://arxiv.org/abs/1902.03284">arxiv</a>] &nbsp;
+            [<a href="https://github.com/pedrodiamel/ferattention">code</a>] &nbsp;
             [<a href="javascript:toggleblock('attfer_abs')">abstract</a>] &nbsp;
             [<a href="javascript:togglebib('attfer_bib')" shape="rect" class="togglebib">bibtex</a>] &nbsp;
 
             <div class="bibtex-home"  >
-              <p align="justify" > <i id="attfer_abs" style="display: none;"> None. </i></p>
+              <p align="justify" > <i id="attfer_abs" style="display: none;"> Pytorch implementation for FERAtt neural net. Facial Expression Recognition with Attention Net (FERAtt), is based on the dual-branch architecture and consists of four major modules: (i) an attention module $G_{att}$ to extract the attention feature map, (ii) a feature extraction module $G_{ft}$ to obtain essential features from the input image $I$, (iii) a reconstruction module $G_{rec}$ to estimate a good attention image $I_{att}$, and (iv) a representation module $G_{rep}$ that is responsible for the representation and classification of the facial expression image. </i></p>
               <pre style="display: none;">
-None
+@article{fernandez2019feratt,
+  title={FERAtt: Facial Expression Recognition with Attention Net},
+  author={Fernandez, Pedro D Marrero and Pe{\~n}a, Fidel A Guerrero 
+          and Ren, Tsang Ing and Cunha, Alexandre},
+  journal={arXiv preprint arXiv:1902.03284},
+  year={2019}
+}
               </pre> 
             </div>
           </div>
