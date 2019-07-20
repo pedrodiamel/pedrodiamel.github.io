@@ -25,6 +25,46 @@ title: Home
    
 
     <!-- item 4 -->
+    <tr>         
+      <td width="20%" valign="top">
+        <!-- image -->
+        <div class="col-sm-2 project-thumbnail-home"></div>
+        <img src="public/img/burst.png" class="img-responsive-home" alt="ContextLocNet">
+        </div>
+
+        <!-- description -->
+        <td width="80%" valign="top">
+          <div class="project-title-home">
+          <strong>Burst ranking for blind multi-image deblurring</strong>
+          </div>          
+          <div class="project-description-home">
+              Fidel A. Guerrero Peña, Pedro D. Marrero Fernández, Tsang Ing Ren, Jorge JG and Nishihara, Ricardo; <em> - </em> 2019.
+          </div>
+          <div class="project-links-home" id="attfer_bib" >            
+            [<a href="paper.html">paper</a>] &nbsp;
+            [<a href="https://arxiv.org/abs/1810.12121">arxiv</a>] &nbsp;
+            [<a href="https://github.com/pedrodiamel/">code</a>] &nbsp;
+            [<a href="javascript:toggleblock('attfer_abs')">abstract</a>] &nbsp;
+            [<a href="javascript:togglebib('attfer_bib')" shape="rect" class="togglebib">bibtex</a>] &nbsp;
+
+            <div class="bibtex-home"  >
+              <p align="justify" > <i id="attfer_abs" style="display: none;"> We propose a new incremental aggregation algorithm for multi-image deblurring with automatic image selection. The primary motivation is that current bursts deblurring methods do not handle well situations in which misalignment or out-of-context frames are present in the burst. These real-life situations result in poor reconstructions or manual selection of the images that will be used to deblur. Automatically selecting best frames within the burst to improve the base reconstruction is challenging because the amount of possible images fusions is equal to the power set cardinal. Here, we approach the multi-image deblurring problem as a two steps process. First, we successfully learn a comparison function to rank a burst of images using a deep convolutional neural network. Then, an incremental Fourier burst accumulation with a reconstruction degradation mechanism is applied fusing only less blurred images that are sufficient to maximize the reconstruction quality. Experiments with the proposed algorithm have shown superior results when compared to other similar approaches, outperforming other methods described in the literature in previously described situations. We validate our findings on several synthetic and real datasets. </i></p>
+              <pre style="display: none;">
+@article{pena2018burst,
+  title={Burst ranking for blind multi-image deblurring},
+  author={Peña, Fidel A Guerrero and Fernández, Pedro D Marrero 
+          and Ren, Tsang Ing and Leandro, Jorge JG and Nishihara, Ricardo},
+  journal={arXiv preprint arXiv:1810.12121},
+  year={2018}
+}
+              </pre> 
+            </div>
+          </div>
+        </td> 
+      </tr>
+      </td>
+    </tr>
+
 
 
 
@@ -43,25 +83,27 @@ title: Home
           <strong>FERAtt: Facial Expression Recognition with Attention Net</strong>
           </div>          
           <div class="project-description-home">
-            Pedro D. Marrero Fernández, Fidel A. Guerrero Peña, Tsang Ing Ren, Alexandre Cunha ; <em> - </em> 2019
+            Pedro D. Marrero Fernández, Fidel A. Guerrero Peña, Tsang Ing Ren, Alexandre Cunha; <em>The IEEE Conference on Computer Vision and Pattern Recognition (CVPR) Workshops </em> 2019.
           </div>
           <div class="project-links-home" id="attfer_bib" >            
-            [<a href=" ">paper</a>] &nbsp;
+            [<a href="http://openaccess.thecvf.com/content_CVPRW_2019/html/MBCCV/Fernandez_FERAtt_Facial_Expression_Recognition_With_Attention_Net_CVPRW_2019_paper.html">paper</a>] &nbsp;
             [<a href="https://arxiv.org/abs/1902.03284">arxiv</a>] &nbsp;
             [<a href="https://github.com/pedrodiamel/ferattention">code</a>] &nbsp;
             [<a href="javascript:toggleblock('attfer_abs')">abstract</a>] &nbsp;
             [<a href="javascript:togglebib('attfer_bib')" shape="rect" class="togglebib">bibtex</a>] &nbsp;
 
             <div class="bibtex-home"  >
-              <p align="justify" > <i id="attfer_abs" style="display: none;"> Pytorch implementation for FERAtt neural net. Facial Expression Recognition with Attention Net (FERAtt), is based on the dual-branch architecture and consists of four major modules: (i) an attention module $G_{att}$ to extract the attention feature map, (ii) a feature extraction module $G_{ft}$ to obtain essential features from the input image $I$, (iii) a reconstruction module $G_{rec}$ to estimate a good attention image $I_{att}$, and (iv) a representation module $G_{rep}$ that is responsible for the representation and classification of the facial expression image. </i></p>
+              <p align="justify" > <i id="attfer_abs" style="display: none;"> We present a new end-to-end network architecture for facial expression recognition with an attention model. It focuses attention in the human face and uses a Gaussian space representation for expression recognition. We devise this architecture based on two fundamental complementary components: (1) facial image correction and attention and (2) facial expression representation and classification. The first component uses an encoder-decoder style network and a convolutional feature extractor that are pixel-wise multiplied to obtain a feature attention map. The second component is responsible for obtaining an embedded representation and classification of the facial expression. We propose a loss function that creates a Gaussian structure on the representation space. To demonstrate the proposed method, we create two larger and more comprehensive synthetic datasets using the traditional BU3DFE and CK+ facial datasets. We compared results with the PreActResNet18 baseline. Our experiments on these datasets have shown the superiority of our approach in recognizing facial expressions. </i></p>
               <pre style="display: none;">
-@article{fernandez2019feratt,
-  title={FERAtt: Facial Expression Recognition with Attention Net},
-  author={Fernandez, Pedro D Marrero and Pe{\~n}a, Fidel A Guerrero 
-          and Ren, Tsang Ing and Cunha, Alexandre},
-  journal={arXiv preprint arXiv:1902.03284},
-  year={2019}
-}
+InProceedings{Fernandez_2019_CVPR_Workshops,
+  author = {Marrero Fernandez, Pedro D. and Guerrero Pena, Fidel A. 
+            and Ing Ren, Tsang and Cunha, Alexandre},
+  title = {FERAtt: Facial Expression Recognition With Attention Net},
+  booktitle = {The IEEE Conference on Computer Vision 
+            and Pattern Recognition (CVPR) Workshops},
+  month = {June},
+  year = {2019}
+  }
               </pre> 
             </div>
           </div>
@@ -86,7 +128,7 @@ title: Home
           <strong>Fast and Robust Multiple ColorChecker Detection using Deep Convolutional Neural Networks</strong>
           </div>          
           <div class="project-description-home">
-            Pedro D. Marrero Fernández, Fidel A. Guerrero Peña, Tsang Ing Ren, Jorge J.G. Leandro; <em>Image and Vision Computing</em> 2019
+            Pedro D. Marrero Fernández, Fidel A. Guerrero Peña, Tsang Ing Ren, Jorge J.G. Leandro; <em>Image and Vision Computing</em> 2019.
           </div>
           <div class="project-links-home" id="colorchecker_detection" >            
             [<a href="https://doi.org/10.1016/j.imavis.2018.11.001">paper</a>] &nbsp;
@@ -131,7 +173,7 @@ title: Home
           <strong>Multiclass Weighted Loss for Instance Segmentation of Cluttered Cells</strong>
           </div>          
           <div class="project-description-home">
-              Fidel A Guerrero-Pena, Pedro D Marrero Fernandez, Tsang Ing Ren, Mary Yui, Ellen Rothenberg, Alexandre Cunha; <em>IEEE International Conference on Image Processing</em> 2018
+              Fidel A Guerrero-Pena, Pedro D Marrero Fernandez, Tsang Ing Ren, Mary Yui, Ellen Rothenberg, Alexandre Cunha; <em>IEEE International Conference on Image Processing</em> 2018.
           </div>
           <div class="project-links-home" id="mwlis" >            
             [<a href="https://doi.org/10.1109/ICIP.2018.8451187">paper</a>] &nbsp;
@@ -168,7 +210,10 @@ title: Home
 
 
 
+
   </table>
+
+
 
   <h2 class="page-title">Abaut Me </h2> 
   <p>My name is Pedro Diamel Marrero Fernandez, I'm Computer Science PhD student at the <a href="http://www.cin.ufpe.br">Informatics Center (CIn)</a>, <a href="http://www.ufpe.br">Federal University of Pernambuco</a>. I'm passionate about deep learning with a strong focus on Computer Vision and Image Processing. Currently, I'm an artificial intelligence researcher at Motorola LLC - CIn partnership Lab. </p>
@@ -177,39 +222,3 @@ title: Home
   
 
 </div>
-
-
-<!-- <div class="container"> -->
-
-  <!-- {% comment %} 
-  <img src="{{ site.baseurl }}{{ site.hero.image }}" />
-  <p>{{ site.hero.caption }}</p> 
-  {% endcomment %} -->
-  
-
-  <!-- <div class="main">
-
-      <h1>Pedro D. Marrero Fernandez</h1>
-      <h2>Image processing | Computer Vision | Machine Learning</h2>
-      <div class="social-icons">
-        <a class="svg" href="https://github.com/pedrodiamel" >
-          <object type="image/svg+xml" data="public/img/github.svg" id="github"></object>
-        </a>
-        <a class="svg" href="https://pl.linkedin.com/in/pedro-diamel/en">
-          <object type="image/svg+xml" data="public/img/linkedin.svg" id="linkedin"></object>
-        </a>
-        <a class="svg" href="https://twitter.com/Pedrodiamel">
-          <object type="image/svg+xml" data="public/img/twitter.svg" id="twitter"></object>
-        </a>
-        <a class="svg" href="mailto:pedrodiamel@gmail.com">
-          <object type="image/svg+xml" data="public/img/envelope.svg" id="mail"></object>
-        </a>
-      </div>
-
-      <div class="under-construction">
-        <h2 class="blog-msg"><a href="/blog/index.html">This website is currently under construction, but I've got a fully functional blog (click here)!</a></h2>  
-      </div>
-
-    </div> -->
-
-<!-- </div> -->
