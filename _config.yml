@@ -16,14 +16,14 @@ logo                : '/public/logo.png'
 
 # Site Author
 author:
-  name              : Pedro D. Marrero Fernandez
-  description       : Vision Computer Engineers and Researcher at <strong>Motorola LLC - CIn partnership</strong>.
+  name              : Pedro D. Marrero Fernandez.
+  description       : Ph.D in Computer Science and IA / Deep Learning Consultant at <strong>Accenture</strong>.
   gravatar          : 5395ebb7e604036f062a9629d4f4328d # md5 hash of your email address
   contact:
     linkedin        : https://www.linkedin.com/in/pedro-diamel
     github          : https://github.com/pedrodiamel
     twitter         : https://twitter.com/Pedrodiamel
-    googlescholar   : https://scholar.google.com/citations?authuser=1&user=g7Vcpe4AAAAJ 
+    googlescholar   : https://scholar.google.com/citations?authuser=1&user=g7Vcpe4AAAAJ
     email           : malito:pedrodiamel@gmail.com
     #orcid           : orcid
     # facebook        : face
@@ -41,7 +41,7 @@ excerpt_separator: "<!-- more -->"
 
 sass:
   style: compressed
-  sass_dir: _scss    
+  sass_dir: _scss
 paginate: 5
 paginate_path: '/blog/page:num'
 permalink: /:year-:month-:day-:title/
@@ -56,15 +56,15 @@ future: true
 
 # Navigation (2nd level links supported)
 nav:
-  Home:           
+  Home:
     - '/'
-  Blog:           
+  Blog:
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
-  About:          
+  About:
     - '/about/'
-  Github Project: 
+  Github Project:
     - 'http://pedrodiamel.github.io/'
 
 
@@ -73,8 +73,8 @@ tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
 hero:
-  image: 
-  caption: 
+  image:
+  caption:
 
 
 
@@ -83,4 +83,3 @@ hero:
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
 disqus_short_name: 'deeplearningforyou' # leave blank if you don't want disqus
-
