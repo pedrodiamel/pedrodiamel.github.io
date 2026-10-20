@@ -6,13 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pedro D. Marrero Fernandez — Computer Vision, Machine Learning, Deep Learning">
     <meta name="author" content="Pedro D. Marrero Fernandez">
+    <meta name="color-scheme" content="light">
 
     <title>Pedro D. Marrero Fernandez</title>
+
+    <!-- apply the saved theme before first paint (light is the default) -->
+    <script>
+        try {
+            if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark';
+        } catch (e) { }
+    </script>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+    <!-- link previews (Open Graph / Twitter) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pedrodiamel.github.io/" />
+    <meta property="og:title" content="Pedro D. Marrero Fernandez" />
+    <meta property="og:description"
+        content="Principal Technical Data Scientist Manager at C.E.S.A.R — Computer Vision, Machine Learning, Deep Learning." />
+    <meta property="og:image" content="https://pedrodiamel.github.io/assets/og.jpg" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Pedrodiamel" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Mono&display=swap"
         rel="stylesheet" />
 
     <link rel="stylesheet" href="css/styles.css" />
@@ -22,13 +45,26 @@
 
     <div id="outer">
 
+        <button type="button" class="theme-toggle" aria-label="Dark mode" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+        </button>
+
         <!-- BIO HEADER -->
         <table id="bio-table">
             <tbody>
                 <tr>
                     <td id="bio-text">
                         <p class="name">Pedro D. Marrero Fernandez</p>
-                        <p>
+                        <p class="tagline">Computer Vision &middot; Deep Learning &middot; Applied ML</p>
+                        <p class="bio">
                             Pedro is a Principal Technical Data Scientist Manager at the
                             <a href="https://www.cesar.org.br/">Recife Center for Advanced Studies and Systems
                                 (C.E.S.A.R)</a>
@@ -37,15 +73,15 @@
                             Lecturer in Computer Science at Universidad de Oriente, Cuba.
                         </p>
                         <p class="bio-links">
-                            <a href="mailto:pedrodiamel@gmail.com">Email</a> &nbsp;/&nbsp;
-                            <a href="https://scholar.google.com.br/citations?hl=en&user=g7Vcpe4AAAAJ">Scholar</a>
-                            &nbsp;/&nbsp;
-                            <a href="https://twitter.com/Pedrodiamel">Twitter</a> &nbsp;/&nbsp;
-                            <a href="https://github.com/pedrodiamel">Github</a>
+                            <a class="icon-email" href="mailto:pedrodiamel@gmail.com">Email</a>
+                            <a class="icon-scholar"
+                                href="https://scholar.google.com.br/citations?hl=en&user=g7Vcpe4AAAAJ">Scholar</a>
+                            <a class="icon-twitter" href="https://twitter.com/Pedrodiamel">Twitter</a>
+                            <a class="icon-github" href="https://github.com/pedrodiamel">GitHub</a>
                         </p>
                     </td>
                     <td id="bio-photo">
-                        <img src="assets/me.png" alt="Pedro D. Marrero Fernandez" />
+                        <img src="assets/me.webp" width="480" height="721" alt="Pedro D. Marrero Fernandez" />
                     </td>
                 </tr>
             </tbody>
@@ -66,10 +102,11 @@
                     <!-- paper: Deep Metric Learning -->
                     <tr>
                         <td class="paper-img">
-                            <img src="assets/papers/dml.gif" alt="Deep Metric Learning" />
+                            <video class="fit-contain" src="assets/papers/dml.mp4" width="320" height="120" autoplay muted loop playsinline
+                                aria-label="Deep Metric Learning"></video>
                         </td>
                         <td class="paper-desc">
-                            <p class="paper-title">Deep Metric Structured Learning For Facial Expression Recognition</p>
+                            <p class="paper-title"><a href="https://arxiv.org/abs/2001.06612">Deep Metric Structured Learning For Facial Expression Recognition</a></p>
                             <p class="paper-authors">
                                 <strong>Pedro D. Marrero Fernandez</strong>, Tsang Ing Ren, Tsang Ing Jyh,
                                 Fidel A. Guerrero Peña, Alexandre Cunha.
@@ -78,10 +115,10 @@
                             <p class="paper-links">
                                 <a href="https://arxiv.org/abs/2001.06612">arXiv</a> /
                                 <a href="https://github.com/pedrodiamel/">code</a> /
-                                <a href="javascript:toggleblock('dml_abs')">abstract</a> /
-                                <a href="javascript:toggleblock('dml_bib')">bibtex</a>
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="dml_abs">abstract</button> /
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="dml_bib">bibtex</button>
                             </p>
-                            <p id="dml_abs" class="abstract" style="display:none;">
+                            <p id="dml_abs" class="abstract" hidden>
                                 We propose a deep metric learning model to create embedded sub-spaces with a well
                                 defined structure. A new loss function that imposes Gaussian structures on the output
                                 space is introduced to create these sub-spaces thus shaping the distribution of the
@@ -89,23 +126,26 @@
                                 and well established structure. It allows fast discovering of classes within classes and
                                 the identification of mean representatives at the centroids of individual classes.
                             </p>
-                            <pre id="dml_bib" class="bibtex" style="display:none;">@article{marrero2020deep,
+                            <div id="dml_bib" class="bibtex-block" hidden>
+                                <button type="button" class="copy-btn">copy</button>
+                                <pre class="bibtex">@article{marrero2020deep,
   title={Deep Metric Structured Learning For Facial Expression Recognition},
   author={Marrero Fernandez, Pedro D and Ren, Tsang Ing and Jyh, Tsang Ing
     and Guerrero Pe{\~n}a, Fidel A and Cunha, Alexandre},
   journal={arXiv},
   year={2020}
 }</pre>
+                            </div>
                         </td>
                     </tr>
 
                     <!-- paper: J Regularization -->
                     <tr>
                         <td class="paper-img">
-                            <img src="assets/papers/js.png" alt="J Regularization" />
+                            <img class="fit-contain" src="assets/papers/js.webp" width="320" height="213" loading="lazy" alt="J Regularization" />
                         </td>
                         <td class="paper-desc">
-                            <p class="paper-title">J Regularization Improves Imbalanced Multiclass Segmentation</p>
+                            <p class="paper-title"><a href="https://arxiv.org/abs/1910.09783">J Regularization Improves Imbalanced Multiclass Segmentation</a></p>
                             <p class="paper-authors">
                                 Fidel A. Guerrero Peña, <strong>Pedro D. Marrero Fernandez</strong>, Paul T. Tarr,
                                 Tsang Ing Ren, Elliot M. Meyerowitz, Alexandre Cunha.
@@ -115,10 +155,10 @@
                                 <a href="https://arxiv.org/abs/1910.09783">arXiv</a> /
                                 <a href="https://youtu.be/8jp9N45tV0Y">video</a> /
                                 <a href="https://github.com/pedrodiamel/">code</a> /
-                                <a href="javascript:toggleblock('js_abs')">abstract</a> /
-                                <a href="javascript:toggleblock('js_bib')">bibtex</a>
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="js_abs">abstract</button> /
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="js_bib">bibtex</button>
                             </p>
-                            <p id="js_abs" class="abstract" style="display:none;">
+                            <p id="js_abs" class="abstract" hidden>
                                 We propose a new loss formulation to further advance the multiclass segmentation of
                                 cluttered cells under weakly supervised conditions. We improve the separation of
                                 touching and immediate cells, obtaining sharp segmentation boundaries with high
@@ -126,7 +166,9 @@
                                 loss. This regularization intrinsically supports class imbalance thus eliminating the
                                 necessity of explicitly using weights to balance training.
                             </p>
-                            <pre id="js_bib" class="bibtex" style="display:none;">@article{pena2019j,
+                            <div id="js_bib" class="bibtex-block" hidden>
+                                <button type="button" class="copy-btn">copy</button>
+                                <pre class="bibtex">@article{pena2019j,
   title={J Regularization Improves Imbalanced Multiclass Segmentation},
   author={Pe{\~n}a, Fidel A Guerrero and Fernandez, Pedro D Marrero
     and Tarr, Paul T and Ren, Tsang Ing and Meyerowitz, Elliot M
@@ -134,17 +176,18 @@
   journal={arXiv preprint arXiv:1910.09783},
   year={2019}
 }</pre>
+                            </div>
                         </td>
                     </tr>
 
                     <!-- paper: Weakly Supervised -->
                     <tr>
                         <td class="paper-img">
-                            <img src="assets/papers/ws.png" alt="Weakly Supervised Segmentation" />
+                            <img src="assets/papers/ws.webp" width="320" height="319" loading="lazy" alt="Weakly Supervised Segmentation" />
                         </td>
                         <td class="paper-desc">
-                            <p class="paper-title">A Weakly Supervised Method for Instance Segmentation of Biological
-                                Cells</p>
+                            <p class="paper-title"><a href="https://link.springer.com/chapter/10.1007/978-3-030-33391-1_25">A Weakly Supervised Method for Instance Segmentation of Biological
+                                Cells</a></p>
                             <p class="paper-authors">
                                 Fidel A. Guerrero-Peña, <strong>Pedro D. Marrero Fernandez</strong>, Tsang Ing Ren,
                                 Alexandre Cunha.
@@ -154,17 +197,19 @@
                             <p class="paper-links">
                                 <a href="https://link.springer.com/chapter/10.1007/978-3-030-33391-1_25">paper</a> /
                                 <a href="https://arxiv.org/abs/1908.09891">arXiv</a> /
-                                <a href="javascript:toggleblock('ws_abs')">abstract</a> /
-                                <a href="javascript:toggleblock('ws_bib')">bibtex</a>
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="ws_abs">abstract</button> /
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="ws_bib">bibtex</button>
                             </p>
-                            <p id="ws_abs" class="abstract" style="display:none;">
+                            <p id="ws_abs" class="abstract" hidden>
                                 We present a weakly supervised deep learning method to perform instance segmentation of
                                 cells present in microscopy images. Annotation of biomedical images in the lab can be
                                 scarce, incomplete, and inaccurate. Our method focuses on three aspects to improve
                                 learning: a loss function operating in three classes, a contour-aware weight map model,
                                 and careful data augmentation on edges.
                             </p>
-                            <pre id="ws_bib" class="bibtex" style="display:none;">@incollection{guerrero2019weakly,
+                            <div id="ws_bib" class="bibtex-block" hidden>
+                                <button type="button" class="copy-btn">copy</button>
+                                <pre class="bibtex">@incollection{guerrero2019weakly,
   title={A Weakly Supervised Method for Instance Segmentation of Biological Cells},
   author={Guerrero-Pe{\~n}a, Fidel A and Fernandez, Pedro D Marrero
     and Ren, Tsang Ing and Cunha, Alexandre},
@@ -174,16 +219,17 @@
   year={2019},
   publisher={Springer}
 }</pre>
+                            </div>
                         </td>
                     </tr>
 
                     <!-- paper: Burst Ranking -->
                     <tr>
                         <td class="paper-img">
-                            <img src="assets/papers/burst.png" alt="Burst Ranking" />
+                            <img src="assets/papers/burst.webp" width="320" height="307" loading="lazy" alt="Burst Ranking" />
                         </td>
                         <td class="paper-desc">
-                            <p class="paper-title">Burst Ranking for Blind Multi-Image Deblurring</p>
+                            <p class="paper-title"><a href="https://doi.org/10.1109/TIP.2019.2936073">Burst Ranking for Blind Multi-Image Deblurring</a></p>
                             <p class="paper-authors">
                                 Fidel A. Guerrero Peña, <strong>Pedro D. Marrero Fernández</strong>, Tsang Ing Ren,
                                 Jorge J.G. Leandro, Ricardo Nishihara.
@@ -192,17 +238,19 @@
                             <p class="paper-links">
                                 <a href="https://doi.org/10.1109/TIP.2019.2936073">paper</a> /
                                 <a href="https://arxiv.org/abs/1810.12121">arXiv</a> /
-                                <a href="javascript:toggleblock('burst_abs')">abstract</a> /
-                                <a href="javascript:toggleblock('burst_bib')">bibtex</a>
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="burst_abs">abstract</button> /
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="burst_bib">bibtex</button>
                             </p>
-                            <p id="burst_abs" class="abstract" style="display:none;">
+                            <p id="burst_abs" class="abstract" hidden>
                                 We propose a new incremental aggregation algorithm for multi-image deblurring with
                                 automatic image selection. We approach the multi-image deblurring problem as a two
                                 steps process: first, we learn a comparison function to rank a burst of images using
                                 a deep convolutional neural network. Then, incremental Fourier burst accumulation fuses
                                 only less blurred images that are sufficient to maximize reconstruction quality.
                             </p>
-                            <pre id="burst_bib" class="bibtex" style="display:none;">@article{pena2019burst,
+                            <div id="burst_bib" class="bibtex-block" hidden>
+                                <button type="button" class="copy-btn">copy</button>
+                                <pre class="bibtex">@article{pena2019burst,
   title={Burst Ranking for Blind Multi-Image Deblurring},
   author={Pe{\~n}a, Fidel Alejandro Guerrero and Fern{\'a}ndez, Pedro Diamel Marrero
     and Ren, Tsang Ing and Leandro, Jorge de Jesus Gomes
@@ -213,16 +261,18 @@
   year={2019},
   publisher={IEEE}
 }</pre>
+                            </div>
                         </td>
                     </tr>
 
                     <!-- paper: FERAtt -->
                     <tr>
                         <td class="paper-img">
-                            <img src="assets/papers/feratt.gif" alt="FERAtt" />
+                            <video src="assets/papers/feratt.mp4" width="320" height="302" autoplay muted loop playsinline
+                                aria-label="FERAtt"></video>
                         </td>
                         <td class="paper-desc">
-                            <p class="paper-title">FERAtt: Facial Expression Recognition with Attention Net</p>
+                            <p class="paper-title"><a href="http://openaccess.thecvf.com/content_CVPRW_2019/html/MBCCV/Fernandez_FERAtt_Facial_Expression_Recognition_With_Attention_Net_CVPRW_2019_paper.html">FERAtt: Facial Expression Recognition with Attention Net</a></p>
                             <p class="paper-authors">
                                 <strong>Pedro D. Marrero Fernández</strong>, Fidel A. Guerrero Peña, Tsang Ing Ren,
                                 Alexandre Cunha.
@@ -234,16 +284,18 @@
                                 /
                                 <a href="https://arxiv.org/abs/1902.03284">arXiv</a> /
                                 <a href="https://github.com/pedrodiamel/ferattention">code</a> /
-                                <a href="javascript:toggleblock('feratt_abs')">abstract</a> /
-                                <a href="javascript:toggleblock('feratt_bib')">bibtex</a>
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="feratt_abs">abstract</button> /
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="feratt_bib">bibtex</button>
                             </p>
-                            <p id="feratt_abs" class="abstract" style="display:none;">
+                            <p id="feratt_abs" class="abstract" hidden>
                                 We present a new end-to-end network architecture for facial expression recognition with
                                 an attention model. It focuses attention on the human face and uses a Gaussian space
                                 representation for expression recognition. The architecture combines facial image
                                 correction and attention with facial expression representation and classification.
                             </p>
-                            <pre id="feratt_bib" class="bibtex" style="display:none;">@InProceedings{Fernandez_2019_CVPR_Workshops,
+                            <div id="feratt_bib" class="bibtex-block" hidden>
+                                <button type="button" class="copy-btn">copy</button>
+                                <pre class="bibtex">@InProceedings{Fernandez_2019_CVPR_Workshops,
   author={Marrero Fernandez, Pedro D. and Guerrero Pena, Fidel A.
     and Ing Ren, Tsang and Cunha, Alexandre},
   title={FERAtt: Facial Expression Recognition With Attention Net},
@@ -252,18 +304,19 @@
   month={June},
   year={2019}
 }</pre>
+                            </div>
                         </td>
                     </tr>
 
                     <!-- paper: ColorChecker Detection -->
                     <tr>
                         <td class="paper-img">
-                            <img src="https://github.com/pedrodiamel/colorchecker-detection/raw/master/rec/mcc.gif"
-                                alt="ColorChecker Detection" />
+                            <video src="assets/papers/mcc.mp4" width="320" height="180" autoplay muted loop playsinline
+                                aria-label="ColorChecker Detection"></video>
                         </td>
                         <td class="paper-desc">
-                            <p class="paper-title">Fast and Robust Multiple ColorChecker Detection using Deep
-                                Convolutional Neural Networks</p>
+                            <p class="paper-title"><a href="https://doi.org/10.1016/j.imavis.2018.11.001">Fast and Robust Multiple ColorChecker Detection using Deep
+                                Convolutional Neural Networks</a></p>
                             <p class="paper-authors">
                                 <strong>Pedro D. Marrero Fernández</strong>, Fidel A. Guerrero Peña, Tsang Ing Ren,
                                 Jorge J.G. Leandro.
@@ -273,17 +326,19 @@
                                 <a href="https://doi.org/10.1016/j.imavis.2018.11.001">paper</a> /
                                 <a href="https://arxiv.org/abs/1810.08639">arXiv</a> /
                                 <a href="https://github.com/pedrodiamel/colorchecker-detection">code</a> /
-                                <a href="javascript:toggleblock('mcc_abs')">abstract</a> /
-                                <a href="javascript:toggleblock('mcc_bib')">bibtex</a>
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="mcc_abs">abstract</button> /
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="mcc_bib">bibtex</button>
                             </p>
-                            <p id="mcc_abs" class="abstract" style="display:none;">
+                            <p id="mcc_abs" class="abstract" hidden>
                                 The objective of this work is to propose a new fast and robust method for automatic
                                 ColorChecker detection. The process is divided into two steps: ColorChecker
                                 localization using a detection convolutional neural network trained on synthetic images,
                                 and ColorChecker patches recognition. The method is fast, robust to overlaps and
                                 invariant to affine projections.
                             </p>
-                            <pre id="mcc_bib" class="bibtex" style="display:none;">@article{MARREROFERNANDEZ2018,
+                            <div id="mcc_bib" class="bibtex-block" hidden>
+                                <button type="button" class="copy-btn">copy</button>
+                                <pre class="bibtex">@article{MARREROFERNANDEZ2018,
   title={Fast and Robust Multiple ColorChecker Detection
     using Deep Convolutional Neural Networks},
   journal={Image and Vision Computing},
@@ -292,17 +347,17 @@
   author={Pedro D. Marrero Fern{\'a}ndez and Fidel A. Guerrero Pe{\~n}a
     and Tsang Ing Ren and Jorge J.G. Leandro},
 }</pre>
+                            </div>
                         </td>
                     </tr>
 
                     <!-- paper: Multiclass Weighted Loss -->
                     <tr>
                         <td class="paper-img">
-                            <img src="assets/papers/mwlcs.png" alt="Multiclass Weighted Loss" />
+                            <img class="fit-contain" src="assets/papers/mwlcs.webp" width="320" height="167" loading="lazy" alt="Multiclass Weighted Loss" />
                         </td>
                         <td class="paper-desc">
-                            <p class="paper-title">Multiclass Weighted Loss for Instance Segmentation of Cluttered Cells
-                            </p>
+                            <p class="paper-title"><a href="https://doi.org/10.1109/ICIP.2018.8451187">Multiclass Weighted Loss for Instance Segmentation of Cluttered Cells</a></p>
                             <p class="paper-authors">
                                 Fidel A. Guerrero-Pena, <strong>Pedro D. Marrero Fernandez</strong>, Tsang Ing Ren,
                                 Mary Yui, Ellen Rothenberg, Alexandre Cunha.
@@ -311,17 +366,19 @@
                             <p class="paper-links">
                                 <a href="https://doi.org/10.1109/ICIP.2018.8451187">paper</a> /
                                 <a href="https://arxiv.org/abs/1802.07465">arXiv</a> /
-                                <a href="javascript:toggleblock('mwlcs_abs')">abstract</a> /
-                                <a href="javascript:toggleblock('mwlcs_bib')">bibtex</a>
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="mwlcs_abs">abstract</button> /
+                                <button type="button" class="link-btn" aria-expanded="false" aria-controls="mwlcs_bib">bibtex</button>
                             </p>
-                            <p id="mwlcs_abs" class="abstract" style="display:none;">
+                            <p id="mwlcs_abs" class="abstract" hidden>
                                 We propose a new multiclass weighted loss function for instance segmentation of
                                 cluttered cells. We present two novel weight maps applied to the weighted cross entropy
                                 loss function which take into account both class imbalance and cell geometry. Binary
                                 ground truth training data is augmented so the learning model can handle not only
                                 foreground and background but also a third touching class.
                             </p>
-                            <pre id="mwlcs_bib" class="bibtex" style="display:none;">@inproceedings{guerrero2018multiclass,
+                            <div id="mwlcs_bib" class="bibtex-block" hidden>
+                                <button type="button" class="copy-btn">copy</button>
+                                <pre class="bibtex">@inproceedings{guerrero2018multiclass,
   title={Multiclass weighted loss for instance segmentation of cluttered cells},
   author={Guerrero-Pena, Fidel A and Fernandez, Pedro D Marrero
     and Ren, Tsang Ing and Yui, Mary and Rothenberg, Ellen
@@ -331,6 +388,7 @@
   year={2018},
   organization={IEEE}
 }</pre>
+                            </div>
                         </td>
                     </tr>
 
@@ -343,42 +401,56 @@
         <!-- EXPERIENCE -->
         <section>
             <h2>Experience</h2>
-            <table class="experience">
-                <tbody>
-                    <tr>
-                        <td class="exp-year">2023 &ndash;</td>
-                        <td class="exp-desc">
+            <ol class="timeline">
+                <li>
+                    <img class="exp-logo" src="assets/cesar.webp" width="256" height="102" loading="lazy"
+                        alt="C.E.S.A.R logo" />
+                    <div>
+                        <p class="exp-year">2023 &ndash; present</p>
+                        <p class="exp-desc">
                             <strong>Principal Technical Data Scientist Manager</strong>,
                             <a href="https://www.cesar.org.br/">C.E.S.A.R</a> &mdash; Recife, Brazil.<br />
                             Leading applied research initiatives in Computer Vision, Machine Learning, and Deep
                             Learning.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="exp-year">2019 &ndash; 2021</td>
-                        <td class="exp-desc">
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img class="exp-logo" src="assets/acceture.webp" width="256" height="144" loading="lazy"
+                        alt="Accenture logo" />
+                    <div>
+                        <p class="exp-year">2019 &ndash; 2021</p>
+                        <p class="exp-desc">
                             <strong>Software Engineer Consultant</strong>,
                             Accenture Liquid Studios &mdash; Brazil.<br />
                             Technology innovation consulting in applied AI.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="exp-year">2015 &ndash; 2019</td>
-                        <td class="exp-desc">
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img class="exp-logo" src="assets/cin.webp" width="200" height="200" loading="lazy"
+                        alt="Motorola logo" />
+                    <div>
+                        <p class="exp-year">2015 &ndash; 2019</p>
+                        <p class="exp-desc">
                             <strong>Senior Research Engineer</strong>,
                             CIn/Motorola Partnership &mdash;
                             Centro de Informática, Universidade Federal de Pernambuco, Brazil.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="exp-year">2010 &ndash; 2015</td>
-                        <td class="exp-desc">
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img class="exp-logo" src="assets/uo.webp" width="100" height="100" loading="lazy"
+                        alt="Universidad de Oriente logo" />
+                    <div>
+                        <p class="exp-year">2010 &ndash; 2015</p>
+                        <p class="exp-desc">
                             <strong>Lecturer in Computer Science</strong>,
                             Universidad de Oriente &mdash; Santiago de Cuba, Cuba.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </p>
+                    </div>
+                </li>
+            </ol>
         </section>
 
         <hr />
@@ -387,14 +459,13 @@
         <footer>
             <p>
                 Design inspired by <a href="https://jonbarron.info/">Jon Barron</a>'s website template.
-                &copy; 2026 Pedro D. Marrero Fernandez.
+                &copy; <span id="year">2026</span> Pedro D. Marrero Fernandez.
             </p>
         </footer>
 
     </div>
 
+    <script src="js/scripts.js"></script>
 </body>
-
-<script src="js/scripts.js"></script>
 
 </html>
